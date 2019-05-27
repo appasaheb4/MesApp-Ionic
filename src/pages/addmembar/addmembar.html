@@ -1,0 +1,65 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Add Membar</ion-title>
+    </ion-navbar>
+
+</ion-header>
+    
+
+<ion-content>
+    <form [formGroup]="addmembar" (ngSubmit)="saveData()" >
+        <ion-list inset>
+            <ion-item>
+                <ion-label>Type *</ion-label>
+                <ion-select formControlName="data.type" [(ngModel)]="data.type">
+                    <ion-option value="Full">Full</ion-option>
+                    <ion-option value="Half">Half</ion-option>
+                </ion-select>
+            </ion-item>  
+            <ion-item>
+                <ion-input type="text" placeholder="Full Name *" formControlName="data.fullName" [(ngModel)]="data.fullName"></ion-input>
+            </ion-item> 
+            <ion-item>
+                <ion-input type="number" placeholder="Mobile No *" formControlName="data.mobileNo" [(ngModel)]="data.mobileNo"></ion-input>
+            </ion-item> 
+            <ion-item>
+                <ion-input type="number" placeholder="Alternative No" formControlName="data.alertNo" [(ngModel)]="data.alertNo"></ion-input>
+            </ion-item> 
+            <ion-item>
+                <ion-textarea type="text" placeholder="Address *" formControlName="data.address" [(ngModel)]="data.address"></ion-textarea>
+            </ion-item>
+            <ion-item>
+                <ion-input type="email" placeholder="Email Id" formControlName="data.email" [(ngModel)]="data.email"></ion-input>
+            </ion-item>     
+            <ion-item>  
+                <ion-label>Birthday Date *</ion-label>
+                <ion-datetime displayFormat="MM/DD/YYYY" formControlName="data.birtdate" [(ngModel)]="data.birtdate"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-input type="number" placeholder="Adhar No" formControlName="data.adharNo" [(ngModel)]="data.adharNo"></ion-input>
+            </ion-item> 
+            <ion-item>  
+                <ion-label>Join Date *</ion-label>
+                <ion-datetime displayFormat="MM/DD/YYYY" formControlName="data.joinDate" [(ngModel)]="data.joinDate"></ion-datetime>
+            </ion-item>
+             <ion-item>
+                <ion-textarea type="text" placeholder="Notes" formControlName="data.note" [(ngModel)]="data.note"></ion-textarea>
+            </ion-item>
+            <ion-item no-lines>
+                <span color="placeholdercolor" item-left>Adhar Card Image</span>
+                <img src="http://menuapphybrid.newapptec.com/Content/Images/Icon/selectImage.png" alt="adharFirst" style="width: 70px;height: 70px;"/>
+                <img src="http://menuapphybrid.newapptec.com/Content/Images/Icon/selectImage.png" alt="adharSecound" style="width: 70px;height: 70px;"/>
+            </ion-item>
+            <ion-item no-lines>
+                <span color="placeholdercolor" item-left>Profile Image</span>
+                <img src="http://menuapphybrid.newapptec.com/Content/Images/Icon/selectImage.png" alt="Alert" style="width: 70px;height: 70px;"/>
+            </ion-item>
+            
+            <ion-item no-lines>
+                <button ion-button type="submit" [disabled]="!addmembar.valid" block >Save</button>
+            </ion-item>
+            
+        </ion-list>
+    </form>
+</ion-content>

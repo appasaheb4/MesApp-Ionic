@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mes Management</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>     
+   <ion-grid>             
+        <ion-row>        
+            <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 (click)="openPage(membarList);">
+                 <button ion-button icon-only block  clear >
+                    <img src="http://menuapphybrid.newapptec.com/Content/Project/Mes/Images/HomePage/MembarList.png" alt="wait"/>
+                </button> 
+                <h6 class="text-center titleName">Membar List</h6>
+            </ion-col>
+           <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 (click)="openPage(addMembar);">
+                <button ion-button icon-only block  clear>  
+                    <img src="http://menuapphybrid.newapptec.com/Content/Project/Mes/Images/HomePage/AddMemabar.png" alt="wait"/>
+                </button> 
+                <h6 class="text-center titleName">Add Membar</h6>  
+            </ion-col>
+            
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "Mes",
+  "app_id": "fea51dad",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
